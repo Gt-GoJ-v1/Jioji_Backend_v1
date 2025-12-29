@@ -2,18 +2,20 @@ package com.spring.jwt.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "products",
-        indexes = {
-                @Index(name = "idx_products_name", columnList = "productName"),
-                @Index(name = "idx_products_type", columnList = "productType"),
-                @Index(name = "idx_products_active", columnList = "active")
-        }
-)
+@Table(name = "products", indexes = {
+        @Index(name = "idx_products_name", columnList = "productName"),
+        @Index(name = "idx_products_type", columnList = "productType"),
+        @Index(name = "idx_products_active", columnList = "active")
+})
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product {
 
     @Id
@@ -38,4 +40,3 @@ public class Product {
         SEED, FERTILIZER
     }
 }
-

@@ -4,13 +4,10 @@ package com.spring.jwt.dto;
 import com.spring.jwt.entity.Role;
 import com.spring.jwt.entity.User;
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -33,14 +30,14 @@ public class UserDTO {
     private Set<String> roles;
 
     private String role;
+    private String firstName;
+    private String lastName;
 
     public UserDTO(User user) {
-        this.email = user.getEmail();
-//        this.address = user.getAddress();
-//        this.firstName = user.getFirstName();
-//        this.lastName = user.getLastName();
         this.mobileNumber = user.getMobileNumber();
         this.userId = user.getUser_id();
+        this.firstName = user.getFirstName();
+        this.lastName = user.getLastName();
 
         if (user.getRoles() != null) {
             this.roles = user.getRoles().stream()
@@ -57,9 +54,9 @@ public class UserDTO {
         UserDTO dto = new UserDTO();
         dto.setEmail(user.getEmail());
         dto.setMobileNumber(user.getMobileNumber());
-//        dto.setFirstName(user.getFirstName());
-//        dto.setLastName(user.getLastName());
-//        dto.setAddress(user.getAddress());
+        // dto.setFirstName(user.getFirstName());
+        // dto.setLastName(user.getLastName());
+        // dto.setAddress(user.getAddress());
         dto.setUserId(user.getUser_id());
 
         if (user.getRoles() != null) {

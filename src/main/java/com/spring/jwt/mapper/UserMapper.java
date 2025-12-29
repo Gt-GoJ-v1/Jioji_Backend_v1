@@ -26,14 +26,16 @@ public class UserMapper {
             UserDTO dto = new UserDTO();
             dto.setEmail(user.getEmail());
             dto.setUserId(user.getUser_id());
+            dto.setFirstName(user.getFirstName());
+            dto.setLastName(user.getLastName());
             if (user.getRoles() != null) {
                 dto.setRoles(user.getRoles().stream()
-                    .map(Role::getName)
-                    .collect(Collectors.toSet()));
+                        .map(Role::getName)
+                        .collect(Collectors.toSet()));
             }
-            
+
             dto.setMobileNumber(user.getMobileNumber());
-            
+
             log.debug("Mapped User to DTO - email: {}", dto.getEmail());
             return dto;
         } catch (Exception e) {
@@ -50,18 +52,18 @@ public class UserMapper {
         try {
             User user = new User();
             user.setEmail(dto.getEmail());
-//            user.setFirstName(dto.getFirstName());
-//            user.setLastName(dto.getLastName());
-//            user.setAddress(dto.getAddress());
+            user.setFirstName(dto.getFirstName());
+            user.setLastName(dto.getLastName());
+            // user.setAddress(dto.getAddress());
             user.setMobileNumber(dto.getMobileNumber());
-            
+
             return user;
         } catch (Exception e) {
             log.error("Error converting DTO to User: {}", e.getMessage(), e);
             throw new RuntimeException("Error converting DTO to User", e);
         }
     }
-    
+
     /**
      * Ensures a string is decrypted if it appears to be encrypted
      */
@@ -69,7 +71,7 @@ public class UserMapper {
         if (value == null || value.isEmpty()) {
             return value;
         }
-        
+
         try {
             String decrypted = encryptionUtil.decrypt(value);
             log.debug("Decryption result: {} chars -> {} chars", value.length(), decrypted.length());
@@ -79,4 +81,4 @@ public class UserMapper {
             return value;
         }
     }
-} 
+}

@@ -4,6 +4,7 @@ C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\jwt\Acti
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\JwtWithSpringSecurityApplication.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\UserNotFoundExceptions.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\config\filter\RateLimitingFilter.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\FarmerFormRequestDTO.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\SecureUserRegistrationRequest.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\mapper\UserMapper.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\DocumentDetailResponseDTO.java
@@ -12,7 +13,9 @@ C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\config\filter\JwtTokenAuthenticationFilter.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\SecurityExceptionHandler.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\jwt\JwtConfig.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\BaseResponseDto.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\entity\Document.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\controller\FarmerFormController.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\ExamTimeWindowException.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\DocumentResponseDTO.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\OtpExpiredException.java
@@ -28,8 +31,10 @@ C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\Co
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\UnauthorizedAccessException.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\CustomUserDetails.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\Document\Service\FileProcessingService.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\repository\EmployeeFarmerSurveyRepository.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\EmailVerificationService\EmailUtils\EmailVerificationRequest.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\controller\AuthController.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\impl\FarmerServiceImpl.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\entity\Product.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\EmailVerificationService\EmailVerificationController.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\entity\FarmerLabReport.java
@@ -47,7 +52,9 @@ C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\Document
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\Document\Service\Impl\FileProcessingServiceImpl.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\jwt\impl\JwtServiceImpl.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\config\aspect\LoggingAspect.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\FileStorageService.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\entity\EmployeeFarmerSurvey.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\repository\FarmerFormRepository.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\EmailVerificationService\EmailVerificationService.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\EmailVerificationService\EmailVerification.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\Enums\DocumentType.java
@@ -65,11 +72,13 @@ C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\entity\P
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\Document\Service\DocumentSecurityService.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\DeviceInfo.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\config\DataInitializer.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\controller\EmployeeFarmerSurveyController.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\UserDTO.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\DocumentNotFoundException.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\config\filter\XssFilter.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\config\filter\CustomAuthenticationProvider.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\jwt\TokenBlacklistService.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\FarmerFormService.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\impl\UserFactory.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\Document\DocumentController.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\DecryptionResponseProcessor.java
@@ -81,6 +90,7 @@ C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exceptio
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\controller\AdminController.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\ExamOnHolidayException.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\DocumentProcessingException.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\FarmerSelfieService.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\mapper\DocumentResponseMapper.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\KeystoreInitializer.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\GlobalExceptionHandler.java
@@ -89,6 +99,7 @@ C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exceptio
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\Document\Service\Impl\OptimizedFileProcessingServiceImpl.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\entity\Role.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\Document\Service\DocumentServiceHelper.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\impl\FileStorageServiceImpl.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\ResetPassword.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\config\CacheConfig.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\InvalidPaginationParameterException.java
@@ -99,6 +110,7 @@ C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\Resp
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\UserAlreadyExistException.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\Document\Service\FileValidationService.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\entity\FarmerSelfie.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\impl\FarmerFormServiceImpl.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\EncryptionUtil.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\EmailNotVerifiedException.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\GenericResponseDto.java
@@ -106,20 +118,24 @@ C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\Document\DocumentService.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\DataMaskingUtils.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\impl\ValidationService.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\EmployeeFarmerSurveyService.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\RefreshTokenRequest.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\DocumentAlreadyExistsException.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\ApiResponse.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\impl\AccountSecurityService.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\PaperFetchException.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\service\impl\EmployeeFarmerSurveyServiceImpl.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\ErrorResponseDto.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\Document\Service\PerformanceMonitoringService.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\entity\User.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\config\OpenApiConfig.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\config\SecurityHeadersConfig.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\EmployeeFarmerSurveyRequestDTO.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\BaseException.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\config\RateLimitingConfig.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\repository\UserRepository.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\EmailService.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\controller\FarmerSelfieController.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\EmailVerificationService\EmailVerificationRepo.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\PageResponseDto.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\ResponseDto.java
@@ -134,6 +150,8 @@ C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\entity\F
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\ResourceNotFoundException.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\SecurityUtil.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\controller\RegistrationController.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\mapper\FarmerFormMapper.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\mapper\EmployeeFarmerSurveyMapper.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\TokenResponse.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\ErrorResponseDTO.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\EncryptionMigrationUtil.java
@@ -143,4 +161,5 @@ C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\config\M
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\dto\PaginatedDocumentResponseDTO.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\utils\HelperUtils.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\repository\RoleRepository.java
+C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\repository\FarmerSelfieRepository.java
 C:\Users\ABHISHEK\Desktop\Jioji_Backend_v1\src\main\java\com\spring\jwt\exception\InvalidDocumentException.java

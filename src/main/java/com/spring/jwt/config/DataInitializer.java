@@ -20,7 +20,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-
 @Configuration
 @RequiredArgsConstructor
 @Slf4j
@@ -64,25 +63,31 @@ public class DataInitializer {
     }
 
     private void initAdmin() {
-        if (userRepository.findByEmail(defaultAdminEmail) == null) {
-            User admin = new User();
+        User admin = userRepository.findByEmail(defaultAdminEmail);
+        if (admin == null) {
+            admin = new User();
             admin.setEmail(defaultAdminEmail);
-            admin.setPassword(passwordEncoder.encode(defaultAdminPassword));
-            admin.setMobileNumber(1234567890L);
-            admin.setEmailVerified(true);
+            admin.setCreatedAt(LocalDateTime.now());
             admin.setFirstName("Admin");
             admin.setLastName("User");
-            admin.setCreatedAt(LocalDateTime.now());
+            admin.setMobileNumber(1234567890L);
+            admin.setEmailVerified(true);
             admin.setStatus(true); // Active
+        }
 
+        // Always update password to match specific config
+        admin.setPassword(passwordEncoder.encode(defaultAdminPassword));
+
+        // Ensure Admin role
+        Role adminRole = roleRepository.findByName("ADMIN");
+        if (adminRole != null) {
             Set<Role> roles = new HashSet<>();
-            Role adminRole = roleRepository.findByName("ADMIN");
             roles.add(adminRole);
             admin.setRoles(roles);
-
-            userRepository.save(admin);
-            log.info("Default Admin created: {}", defaultAdminEmail);
         }
+
+        userRepository.save(admin);
+        log.info("Default Admin updated/created: {}", defaultAdminEmail);
     }
 
     private void initProducts() {

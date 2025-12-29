@@ -153,6 +153,8 @@ public class AppConfig {
 
 
                 .requestMatchers("/api/auth/v1/register/**").permitAll()
+               //changed for access
+                .requestMatchers("/api/v1/auth/login").permitAll()
                 .requestMatchers("/api/v1/users/password/**").permitAll()
                 .requestMatchers("/api/users/**").permitAll()
 

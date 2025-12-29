@@ -147,6 +147,11 @@ public class AppConfig {
                 .requestMatchers(jwtConfig.getUrl()).permitAll()
                 .requestMatchers(jwtConfig.getRefreshUrl()).permitAll()
 
+                .requestMatchers("/api/v1/survey/**").permitAll()
+                .requestMatchers("/api/v1/farmer-selfie/**").permitAll()
+                .requestMatchers(("/api/v1/farmer-form/**")).permitAll()
+
+
                 .requestMatchers("/api/auth/v1/register/**").permitAll()
                 .requestMatchers("/api/v1/users/password/**").permitAll()
                 .requestMatchers("/api/users/**").permitAll()

@@ -21,22 +21,28 @@ public class EmployeeFarmerSurvey {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long surveyId;
 
-    @Column(unique = true)
+    @Column(unique = true,nullable = false)
     private String formNumber;
 
+    @Column(nullable = false)
     private String farmerName;
 
+    @Column(nullable = false,length = 10)
     private String farmerMobile;
 
+    @Column(nullable = false)
     private String landArea;
 
     @Column(columnDefinition = "TEXT")
     private String address;
 
+    @Column(nullable = false)
     private String taluka;
 
+    @Column(nullable = false)
     private String district;
 
+    @Column(nullable = false)
     private Boolean sampleCollected = false;
 
     @ManyToOne(fetch = FetchType.LAZY)

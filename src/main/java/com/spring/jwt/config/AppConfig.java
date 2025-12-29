@@ -182,7 +182,7 @@ public class AppConfig {
 
                 .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")
 
-                .requestMatchers("/api/v1/**").authenticated()
+                .requestMatchers("/api/v1/auth/**").authenticated()
 
                 .anyRequest().authenticated());
 

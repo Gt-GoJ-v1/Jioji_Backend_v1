@@ -7,6 +7,6 @@ import java.util.Optional;
 
 public interface FarmerFormRepository extends JpaRepository<FarmerForm,Long> {
 
-    boolean existsByFormNumber(String formNumber);
+    boolean existsByMobile(String mobile);
     Optional<FarmerForm> findById(Long farmerFormId);
 }

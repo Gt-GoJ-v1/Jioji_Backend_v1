@@ -36,7 +36,7 @@ public class EmployeeFarmerSurveyController {
         }
     @GetMapping
     public ResponseEntity<Page<EmployeeFarmerSurveyRequestDTO>> getSurveys(
-            @RequestParam(required = false) String formNumber,
+         //   @RequestParam(required = false) String formNumber,
             @RequestParam(required = false) String farmerName,
             @RequestParam(required = false) String taluka,
             @RequestParam(required = false) String district,
@@ -44,7 +44,7 @@ public class EmployeeFarmerSurveyController {
     ) {
         return ResponseEntity.ok(
                 employeeFarmerSurveyService.getSurveys(
-                        formNumber,
+                      //  formNumber,
                         farmerName,
                         taluka,
                         district,

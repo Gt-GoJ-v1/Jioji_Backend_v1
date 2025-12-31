@@ -21,33 +21,43 @@ public class EmployeeFarmerSurvey {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long surveyId;
 
-    @Column(unique = true,nullable = false)
-    private String formNumber;
 
-    @Column(nullable = false)
     private String farmerName;
-
-    @Column(nullable = false,length = 10)
     private String farmerMobile;
-
-    @Column(nullable = false)
-    private String landArea;
-
+    private String alternateMobile;
+    private String place;
+    private String village;
+    private String taluka;
+    private String district;
     @Column(columnDefinition = "TEXT")
     private String address;
 
-    @Column(nullable = false)
-    private String taluka;
+    /* ---------- FARM INFO ---------- */
+    @Column(columnDefinition = "TEXT")
+    private String farmingType; // IRRIGATED / RAIN_FED
 
-    @Column(nullable = false)
-    private String district;
 
-    @Column(nullable = false)
-    private Boolean sampleCollected = false;
+    /* ---------- CROP / LIVESTOCK / EQUIPMENT ---------- */
+    @Column(columnDefinition = "TEXT")
+    private String crops;        // COTTON,SOYBEAN
+
+
+    @Column(columnDefinition = "TEXT")
+    private String livestock;    // COW,BUFFALO
+
+
+    @Column(columnDefinition = "TEXT")
+    private String equipment;    // TRACTOR,PLOUGH
+
+
+    private Boolean termsAccepted = false;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "employee_id")
     private User employee;
 
+    private String employeeName;
+
     private LocalDateTime createdAt = LocalDateTime.now();
+
 }

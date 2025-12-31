@@ -28,7 +28,7 @@ public class FarmerFormController {
 
     @GetMapping("/{farmerFormId}")
     public ResponseEntity<BaseResponseDto> getFarmerForm(
-            @PathVariable Long farmerFormId
+            @RequestParam Long farmerFormId
     ) {
         return ResponseEntity.ok(farmerFormService.getFarmerForm(farmerFormId));
     }

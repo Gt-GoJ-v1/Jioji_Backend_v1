@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FarmerFormRequestDTO {
 
-    @NotBlank(message = "Form Number is required")
-    @Schema(description = "Form No Must Be Unique")
-    private String formNumber;
+//    @NotBlank(message = "Form Number is required")
+//    @Schema(description = "Form No Must Be Unique")
+//    private String formNumber;
 
     @NotBlank(message = "Farmer name is required")
     @Pattern(

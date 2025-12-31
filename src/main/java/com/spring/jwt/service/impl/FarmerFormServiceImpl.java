@@ -25,7 +25,7 @@ public class FarmerFormServiceImpl implements FarmerFormService {
     @Transactional
     public BaseResponseDto submitFarmerForm(FarmerFormRequestDTO dto){
 
-        if (farmerFormRepository.existsByFormNumber(dto.getFormNumber())){
+        if (farmerFormRepository.existsByMobile(dto.getMobile())){
             throw new UserAlreadyExistException("FarmerForm already exist");
         }
         FarmerForm form = farmerFormMapper.toEntity(dto);

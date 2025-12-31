@@ -13,68 +13,91 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class EmployeeFarmerSurveyRequestDTO {
 
-    @NotBlank(message = "Form Number is required")
-    @Schema(description = "Form No Must Be Unique")
-    private String formNumber;
+
 
     @NotBlank(message = "Farmer name is required")
     @Pattern(
-            regexp = "^[A-Z][A-Za-z ]{2,50}$",
-            message = "Farmer name must starts with capital letters and contain only letter and spaces(2-50 characters)"
+            regexp = "^[A-Z][a-zA-Z ]{2,50}$",
+            message = "Farmer name must start with capital letter and contain only letters and spaces"
     )
-    @Schema(
-            description = "Name of the farmer",
-            example = "Ramesh Patil"
-    )
+    @Schema(example = "Ramesh Patil")
     private String farmerName;
 
-    @NotBlank(message = "Mobile number is required")
+
+    @NotBlank(message = "Farmer mobile number is required")
     @Pattern(
             regexp = "^[6-9]\\d{9}$",
-            message = "Please Enter Valid 10 digit Mobile No, e.g 7665671265"
+            message = "Please enter valid 10 digit mobile number"
     )
-    @Schema(
-            description = "Enter 10 digit Valid Mobile No",
-            example = "9766431234"
-    )
+    @Schema(example = "9876543210")
     private String farmerMobile;
 
-    @NotBlank(message = "Farmer area is required")
+
     @Pattern(
-            regexp = "^\\d+(\\.\\d{1,2})?$",
-            message = "Land area must be a valid number(example 2 or 2.5)"
+            regexp = "^[6-9]\\d{9}$",
+            message = "Please enter valid 10 digit alternate mobile number"
     )
-    @Schema(
-            description = "Total land area owned by farmer(in Acres)",
-            example = "2.5"
-    )
-    private String landArea;
+    @Schema(example = "9765432109")
+    private String alternateMobile;
 
-    @NotBlank(message = "Address is Required")
-    @Schema(
-            description = "Complete Residential Address Of Farmer",
-            example = "Village Abc , Near Main Road"
-    )
-    private String address;
 
-    @NotBlank(message = "Taluka is Requied")
-    @Schema(
-            description = "Name of Taluka",
-            example = "Mulshi"
-    )
+    @NotBlank(message = "Place is required")
+    @Schema(example = "Near Market Yard")
+    private String place;
+
+
+    @NotBlank(message = "Village is required")
+    @Schema(example = "Deulgaon")
+    private String village;
+
+
+    @NotBlank(message = "Taluka is required")
+    @Schema(example = "Mulshi")
     private String taluka;
 
-    @NotBlank(message = "District is Required")
-    @Schema(
-            description = "Name of District",
-            example = "Pune"
-    )
+
+    @NotBlank(message = "District is required")
+    @Schema(example = "Pune")
     private String district;
 
-    @NotNull(message = "Sample Status is required")
-    private Boolean sampleCollected;
+
+    @NotBlank(message = "Address is required")
+    @Schema(example = "Village ABC, Near Main Road")
+    private String address;
 
 
 
+    @NotBlank(message = "Farming type is required")
+    @Schema(
+            description = "Type of farming",
+            example = "IRRIGATED / RAIN_FED"
+    )
+    private String farmingType;
 
+
+    @NotBlank(message = "Crops is required")
+    @Schema(
+            description = "Comma separated crops",
+            example = "COTTON,SOYBEAN"
+    )
+    private String crops;
+
+    @NotBlank(message = "Live Stock is required")
+    @Schema(
+            description = "Comma separated livestock",
+            example = "COW,BUFFALO"
+    )
+    private String livestock;
+
+    @NotBlank(message = "Equipment is required")
+    @Schema(
+            description = "Comma separated equipment",
+            example = "TRACTOR,PLOUGH"
+    )
+    private String equipment;
+
+
+    @NotNull(message = "Terms acceptance is required")
+    @Schema(example = "true")
+    private Boolean termsAccepted;
 }

@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmployeeFarmerSurveyRepository extends JpaRepository<EmployeeFarmerSurvey, Long> {
 
-    boolean existsByFormNumber(String formNumber);
+    boolean existsByFarmerMobile(String farmerMobile);
 }

@@ -3,6 +3,7 @@ package com.spring.jwt.service.impl;
 import com.spring.jwt.dto.BaseResponseDto;
 import com.spring.jwt.dto.EmployeeFarmerSurveyRequestDTO;
 import com.spring.jwt.entity.EmployeeFarmerSurvey;
+import com.spring.jwt.entity.User;
 import com.spring.jwt.exception.UserAlreadyExistException;
 import com.spring.jwt.exception.UserNotFoundExceptions;
 import com.spring.jwt.mapper.EmployeeFarmerSurveyMapper;
@@ -33,9 +34,8 @@ public class EmployeeFarmerSurveyServiceImpl implements EmployeeFarmerSurveyServ
     @Transactional
     public BaseResponseDTO submitSurvey(EmployeeFarmerSurveyRequestDTO dto, Authentication authentication){
 
-        //Get Logged in employee email from jwt
+
 //        String email = authentication.getName();
-//        log.info("Employee [{}] started farmer survey submission", email);
 //
 //        //fetch employee
 //        User employee=userRepository.findByEmail(email);
@@ -43,14 +43,15 @@ public class EmployeeFarmerSurveyServiceImpl implements EmployeeFarmerSurveyServ
 //            log.error("Employee [{}] not found", email);
 //            throw new UserNotFoundExceptions("Employee ["+email+"] not found");
 //        }
-        if (employeeFarmerSurveyRepository.existsByFormNumber(dto.getFormNumber())){
-            throw new UserAlreadyExistException("Form number ["+dto.getFormNumber()+"] is already exist");
+        if (employeeFarmerSurveyRepository.existsByFarmerMobile(dto.getFarmerMobile())){
+            throw new UserAlreadyExistException("Form number ["+dto.getFarmerMobile()+"] is already exist");
+        }
+        if (!Boolean.TRUE.equals(dto.getTermsAccepted())){
+            throw new IllegalArgumentException("Accepted Terms and Conditions");
         }
         EmployeeFarmerSurvey survey=surveyMapper.toEntity(dto,null);
 
         employeeFarmerSurveyRepository.save(survey);
-       // log.info("Survey saved successfully. FormNumber={}, EmployeeId={}",dto.getFormNumber(),employee.getId());
-
 
         return new BaseResponseDTO(
                 "200",
@@ -72,7 +73,7 @@ public class EmployeeFarmerSurveyServiceImpl implements EmployeeFarmerSurveyServ
     }
     @Override
     public Page<EmployeeFarmerSurveyRequestDTO> getSurveys(
-            String formNumber,
+           // String formNumber,
             String farmerName,
             String taluka,
             String district,
@@ -84,7 +85,7 @@ public class EmployeeFarmerSurveyServiceImpl implements EmployeeFarmerSurveyServ
 
         return new PageImpl<>(
                 surveys.stream()
-                        .filter(survey -> formNumber == null || survey.getFormNumber().equalsIgnoreCase(formNumber))
+                        //filter(survey -> formNumber == null || survey.getFormNumber().equalsIgnoreCase(formNumber))
                         .filter(survey -> farmerName == null || survey.getFarmerName().equalsIgnoreCase(farmerName))
                         .filter(survey -> taluka == null || survey.getTaluka().equalsIgnoreCase(taluka))
                         .filter(survey -> district == null || survey.getDistrict().equalsIgnoreCase(district))

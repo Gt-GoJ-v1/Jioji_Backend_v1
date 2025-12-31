@@ -10,7 +10,7 @@ public class FarmerFormMapper {
     public FarmerForm toEntity(FarmerFormRequestDTO dto) {
         FarmerForm form = new FarmerForm();
 
-        form.setFormNumber(dto.getFormNumber());
+        //form.setFormNumber(dto.getFormNumber());
         form.setFarmerName(dto.getFarmerName());
         form.setMobile(dto.getMobile());
         form.setAddress(dto.getAddress());
@@ -23,7 +23,7 @@ public class FarmerFormMapper {
     }
     public FarmerFormRequestDTO toDTO(FarmerForm form) {
         return new FarmerFormRequestDTO(
-                form.getFormNumber(),
+             //   form.getFormNumber(),
                 form.getFarmerName(),
                 form.getAddress(),
                 form.getMobile(),

@@ -21,8 +21,8 @@ public class FarmerForm {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long farmerFormId;
 
-    @Column(unique = true)
-    private String formNumber;
+   // @Column(unique = true)
+//    private String formNumber;
 
     private String farmerName;
 
